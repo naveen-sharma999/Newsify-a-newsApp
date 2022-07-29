@@ -4,7 +4,7 @@ export class Navbar extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg" style={{backgroundColor : '#e3f2fd'}}>
+        <nav className="navbar navbar-expand-lg" style={{backgroundColor : '#f1f1f1'}}>
           <div className="container-fluid">
             <a className="navbar-brand" href="/">
               Newsify
@@ -25,16 +25,14 @@ export class Navbar extends Component {
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/">
-                    Home
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/">
-                    Link
-                  </a>
-                </li>
+                <li className="nav-item"><a className="nav-link active" aria-current="page" href="/">Home</a></li>
+                <li className="nav-item"><a className="nav-link active" href="/">General</a></li>
+                <li className="nav-item"><a className="nav-link active" href="/">Business</a></li>
+                <li className="nav-item"><a className="nav-link active" href="/">Entertainment</a></li>
+                <li className="nav-item"><a className="nav-link active" href="/">Health</a></li>
+                <li className="nav-item"><a className="nav-link active" href="/">Sports</a></li>
+                <li className="nav-item"><a className="nav-link active" href="/">Science</a></li>
+                <li className="nav-item"><a className="nav-link active" href="/">Technology</a></li>
               </ul>
             </div>
           </div>

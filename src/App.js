@@ -7,9 +7,9 @@ export default class App extends Component {
   name = 'naveen'
   render() {
     return (
-      <div className='bg-light'>
+      <div>
         <Navbar/>
-        <News/>
+        <News category='general'/>
       </div>
     )
   }
