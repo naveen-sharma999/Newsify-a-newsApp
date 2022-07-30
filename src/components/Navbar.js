@@ -1,14 +1,16 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export class Navbar extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg" style={{backgroundColor : '#f1f1f1'}}>
-          <div className="container-fluid">
-            <a className="navbar-brand" href="/">
-              Newsify
-            </a>
+        <nav className={`navbar navbar-${this.props.mode} navbar-expand-lg bg-${this.props.mode}`}>
+          <div className="container-fluid"><Link className="navbar-brand" to="/">Newsify</Link>
+            <div className="form-check form-switch form-check-reverse mx-3">
+              <input className="form-check-input" type="checkbox" role="button" id="flexSwitchCheckReverse" onClick={this.props.toggleMode}/>
+              <label className="form-check-label text-muted" htmlFor="flexSwitchCheckReverse">Dark-Mode {this.props.btnText}</label>
+            </div>
             <button
               className="navbar-toggler"
               type="button"
@@ -25,14 +27,13 @@ export class Navbar extends Component {
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item"><a className="nav-link active" aria-current="page" href="/">Home</a></li>
-                <li className="nav-item"><a className="nav-link active" href="/">General</a></li>
-                <li className="nav-item"><a className="nav-link active" href="/">Business</a></li>
-                <li className="nav-item"><a className="nav-link active" href="/">Entertainment</a></li>
-                <li className="nav-item"><a className="nav-link active" href="/">Health</a></li>
-                <li className="nav-item"><a className="nav-link active" href="/">Sports</a></li>
-                <li className="nav-item"><a className="nav-link active" href="/">Science</a></li>
-                <li className="nav-item"><a className="nav-link active" href="/">Technology</a></li>
+                <li className="nav-item"><Link className="nav-link active" aria-current="page" to="/">Home</Link> </li>
+                <li className="nav-item"><Link className="nav-link active" to="/business">Business</Link> </li>
+                <li className="nav-item"><Link className="nav-link active" to="/entertainment">Entertainment</Link> </li>
+                <li className="nav-item"><Link className="nav-link active" to="/health">Health</Link> </li>
+                <li className="nav-item"><Link className="nav-link active" to="/sports">Sports</Link> </li>
+                <li className="nav-item"><Link className="nav-link active" to="/science">Science</Link> </li>
+                <li className="nav-item"><Link className="nav-link active" to="/technology">Technology</Link> </li>
               </ul>
             </div>
           </div>

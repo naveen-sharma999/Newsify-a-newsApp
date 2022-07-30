@@ -2,17 +2,16 @@ import React, { Component } from "react";
 
 export class NewsItems extends Component {
   render() {
-    let { title, description, imgURL, newsURL } = this.props;
+    let { title, description, imgURL, newsURL, date, source, itemsMode, Headline } = this.props;
     return (
       <div className="my-3">
-        <div className="card bg-light" style={{width: "18rem", minHeight: "28rem"}}>
+        <div className={`card bg-${itemsMode}`} style={{width: "18rem", minHeight: "32rem"}}>
           <img src={imgURL} className="card-img-top" alt="" style={{maxHeight: "10rem"}}/>
           <div className="card-body">
-            <h5 className="card-title">{title}</h5>
-            <p className="card-text">{description} more...</p>
-            <a href={newsURL} target="_blank" className="btn btn-primary">
-              Read More
-            </a>
+            <h5 className={`card-title text-${Headline}`}>{title}</h5>
+            <p className="card-text">{description} <a href={newsURL} target="_blank" className="text-decoration-none text-danger">read more...</a></p>
+            <small className="text-muted">Source : {source}</small>
+            <p className="card-text"><small className="text-muted">Date : {new Date(date).toGMTString()}</small></p>
           </div>
         </div>
       </div>
