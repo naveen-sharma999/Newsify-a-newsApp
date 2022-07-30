@@ -1,15 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
-export class Navbar extends Component {
-  render() {
+function Navbar(props) {
     return (
       <div>
-        <nav className={`navbar navbar-${this.props.mode} navbar-expand-lg bg-${this.props.mode}`}>
+        <nav className={`navbar fixed-top navbar-${props.mode} navbar-expand-lg bg-${props.mode}`}>
           <div className="container-fluid"><Link className="navbar-brand" to="/">Newsify</Link>
             <div className="form-check form-switch form-check-reverse mx-3">
-              <input className="form-check-input" type="checkbox" role="button" id="flexSwitchCheckReverse" onClick={this.props.toggleMode}/>
-              <label className="form-check-label text-muted" htmlFor="flexSwitchCheckReverse">Dark-Mode {this.props.btnText}</label>
+              <input className="form-check-input" type="checkbox" role="button" id="flexSwitchCheckReverse" onClick={props.toggleMode}/>
+              <label className="form-check-label text-muted" htmlFor="flexSwitchCheckReverse">Dark-Mode {props.btnText}</label>
             </div>
             <button
               className="navbar-toggler"
@@ -40,7 +39,6 @@ export class Navbar extends Component {
         </nav>
       </div>
     );
-  }
 }
 
 export default Navbar;
