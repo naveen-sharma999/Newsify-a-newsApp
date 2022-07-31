@@ -25,7 +25,7 @@ export default function App() {
     }
   };
 
-  const apiKey = process.env.REACT_APP_NEWS_API;
+  const apiKey = process.env.REACT_APP_NEWS_API; // put Api key here in 'string' 
 
     return (
       <Router>
