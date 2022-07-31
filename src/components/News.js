@@ -47,12 +47,12 @@ function News(props) {
         <div className="row">
           {articles.map((element) => {
               return (
-                <div className="col-md-4 d-flex justify-content-center" key={element.url}>
+                <div className="" key={element.url}>
                   <NewsItems
                     title={element.title}
                     description={
                       element.description
-                        ? element.description.slice(0, 100)
+                        ? element.description.slice(0, 130)
                         : ""
                     }
                     imgURL={
